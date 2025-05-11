@@ -38,7 +38,7 @@ Download from the official Oracle JDK or OpenJDK.
 Install and set JAVA_HOME in Environment Variables.
 https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 
-###Install Maven (3.6.3+)
+### Install Maven (3.6.3+)
 - Ubuntu/Debian:
 ```bash
 sudo apt install maven
