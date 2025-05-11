@@ -97,6 +97,10 @@ sudo docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev countingapi
 ```bash
 http://localhost:8080/api/v1/counting/test
 ```
+or use Curl on terminal : 
+```bash
+curl http://localhost:8080/api/v1/counting/test
+```
 
 ### API Usage
 - sample INPUT JSON DATA :
@@ -113,6 +117,21 @@ POST http://localhost:8080/api/v1/counting/matched-count/{char}
 ```
 ```bash
 POST http://localhost:8080/api/v1/counting/matched-words/{length}
+```
+-Curl Commands for sample input : 
+```bash
+curl -X POST http://localhost:8080/api/v1/counting/matched-count/b \
+     -H "Content-Type: application/json" \
+     -d '{
+           "wordData": ["apple", "banana my name is this banana", "cherry bunny", "Bamboo"]
+         }'
+```
+```bash
+curl -X POST http://localhost:8080/api/v1/counting/matched-words/6 \
+     -H "Content-Type: application/json" \
+     -d '{
+           "wordData": ["apple", "banana my name is this banana", "cherry bunny", "Bamboo"]
+         }'
 ```
 
 ### Reports
