@@ -1,0 +1,69 @@
+# CountingAPI
+
+CountingAPI is a simple Spring Boot-based RESTful service that processes a list of strings and provides endpoints to analyze word patterns.
+
+## Features
+
+- Count words that start with a given character.
+- Retrieve words longer than a specified length.
+- Dockerized deployment.
+- API documentation via Swagger.
+- Test coverage and security dependency reports.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Java 11+
+- Maven
+- Docker
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/aakashroy91/CountingAPI.git
+cd CountingAPI/
+git checkout master
+```
+### Build the Project
+
+```bash
+mvn clean verify -Ddependency-check.skip=true
+mvn clean package
+```
+### Docker Setup
+
+```bash
+docker build -t countingapi:0.0.1 .
+docker tag countingapi:0.0.1 countingapi:latest
+docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev countingapi
+```
+- Your app is now running on port 8080 
+
+### API Usage
+- sample INPUT JSON DATA :
+{
+  "wordData": ["apple", "banana my name is this banana", "cherry bunny", "Bamboo"]
+}
+
+### REST Endpoints 
+```bash
+GET http://localhost:8080/api/v1/counting/matched-count/{char}
+```
+```bash
+GET http://localhost:8080/api/v1/counting/matched-words/{length}
+```
+
+### Reports
+- Coverage Report: ~/CountingAPI/target/site/jacoco/index.html
+- Dependency Check Report: ~/CountingAPI/target/dependency-check-report.html
+
+### API Documentation
+- Swagger UI: http://localhost:8080/swagger-ui/index.html
+- OpenAPI JSON: http://localhost:8080/v3/api-docs
+- OpenAPI YAML: http://localhost:8080/v3/api-docs.yaml
+
+
+
