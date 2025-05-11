@@ -25,7 +25,7 @@ CountingAPI is a simple Spring Boot-based RESTful service that processes a list 
 ```bash
 git clone https://github.com/aakashroy91/CountingAPI.git
 cd CountingAPI/
-git checkout master
+git checkout main
 ```
 ### Build the Project
 
