@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Generated;
 import java.util.List;
 
 @RestController
@@ -70,7 +71,7 @@ public class CountingAPIControllerV1 {
     public ResponseEntity<List<String>> getWordsBasedOnLength(@PathVariable int length, @RequestBody @Valid WordListDTO wordData) {
         logger.info("Received request to get words having length greater or equal to : {}", length);
         List<String> wordsBasedOnLength = countingService.getWordsBasedOnLength(wordData.getWordData(), length);
-        if(wordsBasedOnLength==null || wordsBasedOnLength.isEmpty())
+        if(wordsBasedOnLength.isEmpty())
             return ResponseEntity.noContent().build();
         return ResponseEntity.ok(wordsBasedOnLength);
     }
@@ -83,6 +84,7 @@ public class CountingAPIControllerV1 {
             @ApiResponse(responseCode = "200", description = "Successfully Up"),
             @ApiResponse(responseCode = "500", description = "Internal server error")
     })
+
     @GetMapping("/test")
     public ResponseEntity<String> testHello() {
         return new ResponseEntity<>("Api working and Up", HttpStatus.OK);
