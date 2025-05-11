@@ -20,6 +20,59 @@ CountingAPI is a simple Spring Boot-based RESTful service that processes a list 
 - Maven 3.6.3 or later
 - Docker 17.09 or higher
 
+### Install Java (JDK 17+)
+- Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk
+java -version
+```
+- macOS (using Homebrew):
+```bash
+brew install openjdk@17
+brew link --force --overwrite openjdk@17
+java -version
+```
+- Windows:
+Download from the official Oracle JDK or OpenJDK.
+Install and set JAVA_HOME in Environment Variables.
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+
+###Install Maven (3.6.3+)
+- Ubuntu/Debian:
+```bash
+sudo apt install maven
+mvn -version
+```
+- macOS (using Homebrew):
+```bash
+brew install maven
+mvn -version
+```
+- Windows:
+Download from the official Maven website.
+Extract and add bin directory to your PATH.
+https://maven.apache.org/download.cgi
+
+### Install Docker
+- Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+```
+- macOS:
+Install Docker Desktop from
+```bash
+https://www.docker.com/products/docker-desktop
+```
+- Windows:
+Install Docker Desktop from below link
+Enable WSL2 and virtualization if prompted.
+https://www.docker.com/products/docker-desktop
+
 ### Clone the Repository
 
 ```bash
