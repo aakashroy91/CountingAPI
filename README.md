@@ -1,6 +1,6 @@
 # CountingAPI
 
-CountingAPI is a simple Spring Boot-based RESTful service that processes a list of strings and provides endpoints to analyze word patterns.
+CountingAPI is a simple Spring Boot-based RESTful service that processes a list of strings and provides endpoints to analyze word patterns using Spring Boot 3.4.5 and Java 17
 
 ## Features
 
@@ -16,7 +16,7 @@ CountingAPI is a simple Spring Boot-based RESTful service that processes a list 
 
 ### Prerequisites
 
-- Java 11+
+- Java 17+
 - Maven
 - Docker
 
