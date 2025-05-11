@@ -40,7 +40,11 @@ docker build -t countingapi:0.0.1 .
 docker tag countingapi:0.0.1 countingapi:latest
 docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev countingapi
 ```
-- Your app is now running on port 8080 
+- Your app is now running on port 8080
+- Check API status using below Endpoint. Output : "Api working and Up"
+```bash
+http://localhost:8080/api/v1/counting/test
+```
 
 ### API Usage
 - sample INPUT JSON DATA :
@@ -49,11 +53,12 @@ docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev countingapi
 }
 
 ### REST Endpoints 
+Content-Type : application/json
 ```bash
-GET http://localhost:8080/api/v1/counting/matched-count/{char}
+POST http://localhost:8080/api/v1/counting/matched-count/{char}
 ```
 ```bash
-GET http://localhost:8080/api/v1/counting/matched-words/{length}
+POST http://localhost:8080/api/v1/counting/matched-words/{length}
 ```
 
 ### Reports
