@@ -48,9 +48,11 @@ http://localhost:8080/api/v1/counting/test
 
 ### API Usage
 - sample INPUT JSON DATA :
+```bash
 {
   "wordData": ["apple", "banana my name is this banana", "cherry bunny", "Bamboo"]
 }
+```
 
 ### REST Endpoints 
 Content-Type : application/json
