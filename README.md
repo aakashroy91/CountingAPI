@@ -17,8 +17,8 @@ CountingAPI is a simple Spring Boot-based RESTful service that processes a list 
 ### Prerequisites
 
 - Java 17+
-- Maven
-- Docker
+- Maven 3.6.3 or later
+- Docker 17.09 or higher
 
 ### Clone the Repository
 
