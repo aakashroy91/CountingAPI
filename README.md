@@ -88,9 +88,9 @@ mvn clean package
 ### Docker Setup
 
 ```bash
-docker build -t countingapi:0.0.1 .
-docker tag countingapi:0.0.1 countingapi:latest
-docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev countingapi
+sudo docker build -t countingapi:0.0.1 .
+sudo docker tag countingapi:0.0.1 countingapi:latest
+sudo docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev countingapi
 ```
 - Your app is now running on port 8080
 - Check API status using below Endpoint. Output : "Api working and Up"
