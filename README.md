@@ -65,9 +65,8 @@ docker --version
 ```
 - macOS:
 Install Docker Desktop from
-```bash
 https://www.docker.com/products/docker-desktop
-```
+
 - Windows:
 Install Docker Desktop from below link
 Enable WSL2 and virtualization if prompted.
