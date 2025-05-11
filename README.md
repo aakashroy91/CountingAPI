@@ -72,5 +72,17 @@ POST http://localhost:8080/api/v1/counting/matched-words/{length}
 - OpenAPI JSON: http://localhost:8080/v3/api-docs
 - OpenAPI YAML: http://localhost:8080/v3/api-docs.yaml
 
-
-
+### Minimum Code Coverage
+-Currently code coverage percentage is set to 80%. Jar will not be created if this condition is not met. To modify this change rule setting in jacoco plugin information in pom.xml file
+```bash
+<rule>
+<element>BUNDLE</element>
+<limits>
+<limit>
+<counter>INSTRUCTION</counter>
+<value>COVEREDRATIO</value>
+<minimum>0.80</minimum> //change this value to reduce coverage check.
+</limit>
+</limits>
+</rule>
+```
